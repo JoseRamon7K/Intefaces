@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Actividad 2.8</title>
+    <style>
+        .uno{
+            z-index:19;
+            position: absolute; 
+            background-color: #606; 
+            color:#ffc; 
+            padding:10px; 
+            text-align: center; 
+            width: 300px;
+        }
+        .dos{
+            z-index:17; 
+            position: relative; 
+            width: 300px; 
+            padding: 10px; 
+            background-color: #066; 
+            color:#ffc; 
+            left: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>NO define posición</h1>
+<div class="uno">Prueba cambiar el valor de este dic entre static y absolute</div>
+<div class="dos">Capa de posicionamiento relative<br />
+Se tiene en cuenta esta capa para posicionar las siguientes.</div>
+<h2>La última en ponerse. En los divs cambia los valores de z-index para ver como varia la superposición.</h2>
+
+</body>
+</html>

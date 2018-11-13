@@ -1,0 +1,17 @@
+
+aside{
+    flex: 2 1 20%;
+    height: 20%;
+    order: 2;
+}
+
+main{
+    margin: 0 0.5% 0 2.5%;
+    flex: 8 1 80%;  
+    order: 1;
+}
+
+div{
+    display: flex;
+    width: 97%;
+}

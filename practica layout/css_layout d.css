@@ -1,0 +1,19 @@
+
+aside{
+    width: 95%;     
+    margin-left: 2.5%;
+}
+
+main{
+    display: flow-root;
+    width: 95%;      
+    margin-left: 2.5%;
+}
+section{
+    border: 1px green solid;
+    background-color: rgb(108, 235, 240);    
+    border-radius: 15px;
+    width:50%;
+    float: left;
+}
+footer{clear: both;}

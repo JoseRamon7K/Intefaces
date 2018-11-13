@@ -1,0 +1,29 @@
+body{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    padding-top: 50px;
+}
+.container{
+    display: grid;
+    width: 95%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 80px 1fr 3fr 50px;
+    grid-gap: 1rem;
+}
+header{
+    grid-column: 1/5;
+    grid-row: 1/2;
+}
+footer{
+    grid-column: 1/5;
+    grid-row: 4/5;
+}
+main{
+    grid-column: 2/5;
+    grid-row: 2/4;
+}
+aside{
+    grid-column: 1/2;
+    grid-row: 2/3;
+}

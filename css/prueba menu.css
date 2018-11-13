@@ -1,0 +1,47 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+div{
+    margin: auto;
+    width: 250px;
+}
+
+ul{
+    list-style: none;
+}
+.index li a{
+    background-color: #000;
+    color:#fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+.index li a:hover{
+    background-color: #434343;
+}
+
+.index > li{
+    float: left;
+}
+
+.index li ul{
+    display: none;
+    position: absolute;
+    min-width: 140px;
+}
+
+
+.index li:hover>ul{
+    display:block;
+}
+
+.index li ul li{
+    position: relative;
+}
+
+.index li ul li ul{
+    right: -140px;
+    top: 0px;
+}

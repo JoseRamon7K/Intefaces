@@ -1,0 +1,28 @@
+div{
+    display: flex;    
+    width: 97%;        
+}
+
+aside{  
+    flex: 2 1 20%;
+    margin: 0 0.5% 0 2.5%;    
+    height: 20%;
+}
+
+main{  
+    flex: 3 1 80%;
+}
+
+#sect{    
+    display: flex;    
+    width: 100%;    
+    flex-direction: column;
+}
+
+section{
+    border: 1px green solid;
+    background-color: rgb(108, 235, 240);    
+    border-radius: 15px;    
+    flex: 3 1 60%;    
+}
+

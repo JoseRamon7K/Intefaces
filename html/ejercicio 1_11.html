@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>1_Primer ejemplo</title>
+        <style type="text/css">
+            @media screen and (min-width: 0px){
+                div#mydiv{
+                    width: 100px;
+                    margin: 0px auto;
+                    height: 100px;
+                    background: blue;
+                    font-size: 32px;
+                }
+            }
+            @media screen and (min-width: 500px){
+                div#mydiv{
+                    width: 500px;
+                    background: #DDEE00;
+                }
+            }
+            @media screen and (min-width: 750px){
+                div#mydiv{
+                    width: 750px;
+                    background: green;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="mydiv">This is the div that has to be visualised adapter</div>
+    </body>
+</html>

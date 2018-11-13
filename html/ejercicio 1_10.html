@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>1_Primer ejemplo</title>
+        <style type="text/css">
+            *{box-sizing: border-box;} /* La propiedad box-sizing Nos ahorrará muchos dolores de cabeza, con el valor border-box el border y el padding no incrementan el ancho de la caja
+            http://es.learnlayout.com/box-sizing.html y +info -> https://developer.mozilla.org/es/docs/Web/CSS/box-sizing
+            Si comentáis la propiedad veréis que las cajas ensanchan en 1px y se empujan unas a otras forzando su aparición en columna*/
+            body{
+                width: 90%; /*para que nos ocupe un 90% del espacio total del Firefox*/
+                max-width: 950px; /*Comentad este elemento y maximizad el navegador, veréis que las cajas se estiran en exceso*/
+                min-width: 450px; /*Comentad este elemento y minimizad el navegador, veréis que los textos se superponen*/
+                margin: auto; /*para que centre el body en el navegador. Quitadlo y probad*/
+            }
+            header, nav {
+                border: 1px solid green;
+                border-radius: 15px;
+                padding-left: 1em;
+            }
+            aside{
+                border: 1px dotted blue;
+                float: left;
+                width: 15%; /*haced la ventana pequeña, veréis que pasa con el contenido de aside ¿cómo evitarlo?*/
+                padding-left: 1em;
+            }
+            main{
+                border:1px dashed red;
+                margin-left: 15%; /*¿qué pasa si no se pone?*/
+                /*podemos eliminar y poner solo la de abajo, probad float con los valores left y right*/ 
+                /*float: right; /*¿qué pasas si lo descomentamos? Pues que tendremos que descomentar la propiedad clear del footer ya que al estar flotando el aside y el main, el footer subiría hasta tropezar con el primer elemento que no flote, en este caso el nav*/
+                width: 85%;
+            }
+            footer{
+                border: 1px solid navy;
+                border-radius: 15px;
+                padding-left: 1em;
+                /*clear: both; /*teniendo el main y el aside flotantes, quitad esta propiedad y ver el efecto https://developer.mozilla.org/es/docs/Web/CSS/clear*/
+            }
+        </style>
+    </head>
+    <body>
+        <header>Cabecera</header>
+        <nav>Menú Navegación</nav>
+        <aside>bloque Aside</aside>
+        <main>Contenido principal. ¿Porqué se monta el lateral con este bloque cuando comentamos el box-sizing?
+            <br />Mirad los comentarios y <b>trastead con el CSS del aside, el main y el footer, </b> para aprender el comportamiento de los bloques
+            <br />¿Por qué este contenido aparece pegado a la izquiera de su caja contenedora y el resto no? 
+        </main>
+        <footer>Pie de página</footer>
+    </body>
+</html>

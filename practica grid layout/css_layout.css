@@ -1,0 +1,30 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    background-color: gray;
+}
+
+header,footer{
+    border: 1px greenyellow solid;
+    background-color: rgb(231, 227, 169);
+    border-radius: 15px;
+    padding: 5px;
+    padding-bottom: 50px;
+}
+
+aside{
+    border: 1px greenyellow solid;
+    background-color: rgb(170, 169, 231);    
+    border-radius: 15px;
+}
+
+main{
+    border: 1px greenyellow solid;
+    background-color: rgb(218, 231, 169);    
+    border-radius: 15px;
+}
+
+.em-2{
+    font-size: 2em;
+}

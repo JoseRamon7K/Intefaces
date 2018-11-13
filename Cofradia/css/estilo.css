@@ -1,0 +1,258 @@
+/*DOCUMENT CSS*/
+
+@font-face{
+    font-family:gotham-bold;
+    src: url(../font/Gotham-Bold.otf);
+}
+
+@font-face{
+    font-family:gotham-medium;
+    src: url(../font/Gotham-Medium.otf);
+}
+
+@font-face{
+    font-family:gotham;
+    src: url(../font/Gotham-Book.otf);
+}
+
+@font-face{
+    font-family:gotham-light;
+    src: url(../font/Gotham-Light.otf);
+}
+
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+header p {
+    margin: 0;
+    color: #ec0a82;
+    background-color: #3f3f3f;
+    font-family: gotham-medium;
+    font-size: 13px;
+    padding: 5px 0px 5px 0px;
+    text-align: center;
+    border-bottom: 4px solid #ec0a82;
+}
+
+header div img {
+    width: 70px;
+    margin-top: 30px;
+    margin-left: 80px;
+}
+
+header div text {
+    margin-top: 46px;
+    float: right;
+    margin-right: 80px;
+    text-align: right;
+    line-height: 30px;
+    color: #ec0a82;
+    padding-right: 15px;
+    text-align: center;
+    font-size: 25px;
+}
+
+header div text b{
+    color: #3f3f3f;
+}
+
+.prox-part{
+    margin-top: 46px;
+    margin-right: 12px;
+    border-right: 2px solid #3f3f3f;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: right;
+}
+
+.borde-izq{
+    border-left: 2px solid #ec0a82;
+}
+
+header nav{
+    margin-top: -60px;
+    border-top: 2px solid #ec0a82;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+ul a{
+    width: 100%;
+    text-decoration: none;
+    color: black;
+}
+
+li {
+    font-family: gotham-medium;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    border-right: 2px solid #ec0a82;
+}
+
+li:hover{
+    color: #ec0a82;    
+}
+
+section {
+    margin-right: 80px;
+    margin-left: 80px;
+    margin-top: 90px;
+}
+
+section img{
+    width: 100%;
+}
+
+.espacio{
+    margin-bottom: 50px;
+}
+
+.separador{
+    background-image: url(../img/separador.png);
+    background-position: left center;
+    background-repeat: no-repeat;
+    text-align: center;
+    margin-top: 30px;
+}
+
+section div span {
+    color: #ec0a82;
+    font-size: 15px;
+    padding: 10px 20px;
+    text-align: center;
+    background-color: white;
+}
+
+.equipo {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.equipo div{
+    width: 26%;
+    margin-bottom: 40px;
+}
+
+.equipo img {
+    border-bottom: 2px solid #ec0a82;
+    width: 100%;
+}
+
+.dorsal {
+    font-size: 30px;
+    color: white;
+    background-color: #ec0a82;
+    padding: 10px 0px;
+    float: left;
+    margin-top: -6px;
+    width: 60px;
+    text-align: center;
+}
+
+.nombre {
+    float: left;
+    margin: 7px 15px;
+}
+
+.pos-jug {
+    background-color: transparent;
+    text-align: left;
+    padding: 0;
+}
+
+.calendario {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.mes{
+    width: 45%;
+    margin-top: 50px;
+}
+
+.mes p {
+    background-color: #ec0a82;
+    padding: 10px 0px 10px 20px;
+    color: white;
+}
+
+.mes div p {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 0;
+    background-color: transparent;
+}
+
+.mes div p:hover{
+    background-color: #fcd6ea;
+}
+
+.mes div p a{
+    text-decoration: none;
+    padding-top: 10px;
+}
+
+.dia{
+    width: 40px;
+    text-align: left;
+    font-family: gotham-bold;
+    background-color: transparent;
+}
+
+.part {
+    width: 200px;
+    text-align: left;
+    background-color: transparent;
+}
+
+.hora {
+    width: 70px;
+    text-align: left;
+    background-color: transparent;
+}
+
+.resultado{
+    width: 40px;
+    text-align: center;
+    background-color: transparent;
+}
+
+.galeria {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.galeria div{
+    width: 60%;
+    margin-bottom: 40px;
+}
+
+.arriba {
+    width: 40px;
+    position: fixed;
+    right: 15px;
+    bottom: 25px;
+}
+
+.arriba p {
+    font-size: 20px;
+    border: none;
+    background-color: #ec0a82;
+    color: white;
+    padding: 12px 0px 3px;
+}

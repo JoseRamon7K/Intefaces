@@ -1,0 +1,101 @@
+/*BANNER*/
+#derecha{
+  position:absolute;
+  top:.60em;
+	left: 0.60em;
+}
+/*FIN BANNER*/
+/*ESTILOS PARA CUERPO DE LA PAGINA*/
+
+body{
+  background-color: #9A2EFE;
+	padding: 0.1em;
+}
+
+h1{
+  padding-right: 1em;
+  text-align: right;
+	margin-bottom: 1em;
+}
+
+article{
+  padding: 1em;
+	line-height: 1.5;
+}
+
+footer{
+  padding-right: 1em;
+  padding-top: 2em;
+	border-top: 5px solid rgba(225,225,225,.1);
+  text-align: right;
+	font-size:.9em;
+	color:rgba(0,0,0,.5);
+}
+
+/*FIN CUERPO*/
+/*INICIO MENU*/
+
+#menu{
+  list-style:none;
+  line-height: 42px;
+	margin: 2em auto;
+  /*outline: 1px solid red;*/
+	padding-left: 0px;
+	width: 15em;
+	font-weight: bold;
+}
+
+#menu a{
+  color:#ddd;
+	display:block;
+  text-decoration: none;
+  text-transform: Uppercase;
+	width: 100%;
+} 
+
+#menu li{
+  /*outline: 1px solid green;*/
+	box-shadow:3px 0 rgba(205,185,35,.8) inset;
+	margin-bottom: 5px;
+	padding-left: 1.5em;
+	--webkit-transition:all .5s;
+	-o-transition: .5s ease;
+	transition: .5s ease;
+}
+
+#menu li:hover{
+  box-shadow:15em 0 rgba(205,185,35,.8) inset;
+}
+
+/*FIN MENU*/
+/*POSICION RESPONSIVE MENU*/
+
+nav{
+	background: rgba(0,0,0,.85);
+	box-sizing:border-box;
+	padding-right: .25em;
+	padding-top: 3em;
+  position: absolute;
+	top:0;
+	left:-18em;
+	z-index:20;
+	height: 100%;
+	transition: .5s ease;
+}
+
+nav.mostrar{
+	left:0em;
+}
+
+#mostrar-nav{
+  cursor:pointer;
+  position: absolute;
+	top:2em;
+	left:2em;
+	width: 30px;
+	height: 30px;
+	background-image: url(../imagenes/menu-icon.png);
+	z-index:30;
+}
+
+/*POSICION MENU*/

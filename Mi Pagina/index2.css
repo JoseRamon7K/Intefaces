@@ -1,0 +1,203 @@
+    *{
+        box-sizing: border-box;
+    }
+    body{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 30px, 50px,1fr,50px;
+        margin: 0px;
+        grid-template-areas: 
+        'header'
+        'nav'
+        'main'
+        'footer';
+        font-family: Georgia;
+    }
+    .negrita{
+        font-weight: bolder;
+    }
+    .azul{
+        color: rgb(0, 153, 255);
+    }
+/*Inicio Header ______________________________________________________________________________*/
+    header{ 
+        border-bottom: 3px blue solid;    
+        background-color: rgb(34, 183, 252) ;
+        grid-area: 'header';
+        padding: 5px;
+        display: grid;
+        grid-template-columns: 1fr 40px;
+        grid-template-rows: 1fr;
+    }
+    #titulo{
+        text-align: center;
+        margin: 0px;
+        color: rgba(14, 14, 48,0.90)
+    }
+    #pdf{
+        width: 30px;
+        
+    }
+    #hrefPDF{
+        grid-column: 2/3;
+        grid-row: 1/2;
+        margin: auto 0px;
+    }
+/*Fin Header ______________________________________________________________________________*/
+/*Inicio Main ______________________________________________________________________________*/
+    main{
+        display: grid;
+        grid-template-columns: 260px 1fr;
+        grid-template-rows: auto 1fr;
+        grid-gap: 5px;
+    }
+    /*Inicio DatosPersonales__________________________________________________________________________*/
+        #datosPersonales{
+            grid-column: 1/3;
+            grid-row: 1/2;
+            border-bottom: 2px rgba(0, 0, 0,0.5) solid;  
+            width: 93%;
+            grid-area: 'main';
+            margin: auto;
+            color: black; 
+            margin-top: 10px;
+            display: grid;
+            grid-template-columns: 150px 1fr 2fr;
+            grid-template-rows: 1fr;
+        }
+        #foto{
+            grid-column: 1/2;
+            grid-row: 1/2;
+            margin: 15px;
+            border: 1px black solid;  
+            width: 105px;
+            height: 150px;
+        }
+        #datos{
+            grid-column: 2/3;
+            grid-row: 1/2;
+            padding: 15px;
+        }
+        #datos>p{
+            margin: 3px;
+        }
+        #curriculum{
+            margin: auto;
+        }
+    /*Fin DatosPersonales__________________________________________________________________________*/
+        
+    /*Inicio Menu__________________________________________________________________________*/
+        #menu{
+            margin-left: 10px;
+            grid-column: 1/2;
+            grid-row: 2/3;
+            background-color:rgb(34, 183, 252);
+            height: 190px;
+        }
+        li{            
+            margin-left:-20px; 
+        }
+        ul{           
+            list-style: none;
+        }
+        a{
+            color: white;
+            text-decoration:none; 
+        }
+        a:hover{            
+            font-weight: bolder;
+        }
+    /*Fin Menu__________________________________________________________________________*/
+    
+    /*Inicio Contenido__________________________________________________________________________*/
+        table{
+            border: 2px rgba(0, 0, 0,0.2) solid;  
+            border-top: none;
+            width: 98%;
+            background-color:rgba(219, 219, 219,0.5);
+            margin-bottom: 20px;
+        }
+        caption{
+            background-color:rgb(34, 183, 252);
+            font-weight: bolder;
+            margin-bottom: -2px;
+        }
+        td+tr{
+            border-bottom: 2px rgba(0, 0, 0,0.5) solid;
+        }
+        td{
+            text-align: center;
+            border-top: 1px rgba(0, 0, 0,0.2) solid;  
+        }
+        td>p{
+            margin: 5px 0px 0px 5px;             
+        }
+    /*Fin Contenido__________________________________________________________________________*/
+    /*Inicio Contacto__________________________________________________________________________*/
+        #contactar{
+            border: 2px rgba(0, 0, 0,0.2) solid;  
+            border-top: none;
+            width: 98%;
+            background-color:rgba(219, 219, 219,0.5);
+            margin-bottom: 20px;
+        }
+        #contactar>h2{
+            text-align: center;
+            background-color:rgb(34, 183, 252);
+            font-weight: bolder;
+            margin-bottom: -2px;
+        }
+        form{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 10px;
+        }
+        input[name=nombre],input[name=email],input[name=telefono],#boton,textarea{
+            margin: auto;
+        }
+        input[name=nombre]{
+            margin-top: 10px;
+        }
+        textarea{
+            width: 500px;
+        }
+        #boton{
+            background-color: rgba(0, 0, 0,0.5);
+            color:white;
+            font-weight: bolder;
+            width: 200px;
+            height: 40px;
+            margin-bottom: 10px;
+        }
+    /*Fin Contacto__________________________________________________________________________*/
+/*Fin Main ______________________________________________________________________________*/
+
+/*Inicio Footer ______________________________________________________________________________*/
+    footer{
+        border: 1px black solid;
+        background-color: rgba(0, 0, 0,0.8);
+        color: white;
+        grid-area: 'footer';
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+    #contacto{
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    #contacto>p{
+        margin: 5px;
+        margin-left: 30px;
+    }
+    #creador{
+        grid-column: 1/2;
+        grid-row: 1/2;
+        margin: 20px;
+    }
+    #contacto>p#tit{
+        margin-top: 20px;
+        margin-left: 0px;
+    }
+/*Fin Footer ______________________________________________________________________________*/
+

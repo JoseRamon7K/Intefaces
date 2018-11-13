@@ -1,0 +1,355 @@
+body{
+   margin: 1px;
+    font-family: Georgia;
+
+}
+/*Inicio Header ______________________________________________________________________________*/
+header{
+    border: 1px black solid;    
+    background-color: #3333FF ;
+    width: 99%;
+    padding: 5px;
+}
+#titulo{
+    color: white;
+    grid-area: titulo;
+    text-align: center;
+}
+
+/*Fin Header ______________________________________________________________________________*/
+/*Inicio Nav ______________________________________________________________________________*/
+nav{  
+    width: 99%;
+    margin-left: 15px;
+}
+/*Fin Nav ______________________________________________________________________________*/
+/*Inicio Contenido ______________________________________________________________________________*/
+#contenido{
+    display: grid;
+    grid-template-columns: 1fr 240px;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "main aside"
+}
+/*Fin Contenido ______________________________________________________________________________*/
+
+/*Inicio Main ______________________________________________________________________________*/
+main{
+    border-top: 3px black solid;  
+    background-color: rgba(204, 255, 255,0.55);
+    width: 93%;
+    height: 1000px;
+    grid-area: main;
+    margin: auto;
+    margin-top: 5px;
+    color: black; 
+
+}
+a:hover{
+    color: blue;
+}
+.home{
+    color: red;
+    text-decoration: underline;
+}
+/*Fin Main ______________________________________________________________________________*/
+
+/*Inicio Aside ______________________________________________________________________________*/
+
+aside{
+    grid-area: aside;
+    margin-top: 5px;
+    border: 1px dotted blue;
+    margin-bottom: auto;
+    padding-bottom: 10px;
+}
+aside ul{
+    list-style: none;
+}
+aside ul a{
+    text-decoration: none;
+    color: black;
+}
+aside ul li ul a{
+    text-decoration: none;
+    color: rgb(0, 133, 241);
+}
+
+/*Fin Aside ______________________________________________________________________________*/
+
+
+/*Inicio Footer ______________________________________________________________________________*/
+footer{
+    border: 1px black solid;
+    background-color: rgba(0, 0, 0,0.8);
+    color: white;
+    width: 99%;
+}
+/*Fin Footer ______________________________________________________________________________*/
+
+
+@media screen and (min-width: 0px){
+    /*Inicio Header ______________________________________________________________________________*/
+        header{
+            grid-area: header;
+            display: grid;
+            grid-template-columns: 40px 1fr 50px; 
+            grid-template-rows: 1fr;   
+        }
+        #bmenu{        
+            grid-column: 1/2;
+            grid-row: 1/2;
+            width: 30px;
+            display: block;
+            margin-top: 10px;
+        }
+        #logo{
+            grid-column: 3/4;
+            grid-row: 1/2;
+            width: 50px;
+        }
+        #titulo{
+            grid-column: 2/3;
+            grid-row: 1/2;
+            font-size: 30px;
+            margin: 10px 0px;
+        }
+        .buscar{    
+            grid-area: busqueda;
+            display: grid;
+            grid-template-columns: 20px 1fr 20px;
+            grid-template-rows: 1fr;
+            grid-template-areas: 
+            'lupa search cerrar';
+        }
+        #lupa{
+            display: none;
+            width: 18px;    
+            margin: auto;
+            grid-area: lupa;
+            position: relative;
+            left: 28px;
+        }
+        #lupa:hover{
+            cursor: pointer;
+        }
+        #search{
+            display: none;
+            border-radius: 15px;
+            width: 150px;
+            height: 20px;
+            margin: auto;
+            padding: 0px 25px;
+            font-size: 11px;
+            grid-area: search;    
+        }
+        #cerrar{   
+            display: none;
+            width: 18px;       
+            margin: auto; 
+            grid-area: cerrar;
+            position: relative;
+            right: 28px;
+        }
+        #cerrar:hover{
+            cursor: pointer;
+        }
+    /*Fin Header ______________________________________________________________________________*/
+    
+    /*Inicio Nav ______________________________________________________________________________*/
+        nav{
+            display:none;
+        }
+    /*Fin Nav ______________________________________________________________________________*/
+    
+    /*Inicio Contenido ______________________________________________________________________________*/
+        #contenido{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            grid-template-areas: 
+            "main";
+
+        }
+   
+
+        /*Inicio Main ______________________________________________________________________________*/
+            main{
+                grid-area: main;
+                padding: 10px;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 40px 1fr 1fr; 
+            }
+            .home{
+                grid-column: 1/2;
+                grid-row: 1/2;
+            }
+            .primera{
+                grid-column: 1/2;
+                grid-row: 2/3;
+            }
+            .segunda{
+                grid-column: 1/2;
+                grid-row: 3/4;
+            }
+        /*Fin Main ______________________________________________________________________________*/
+        
+        /* Inicio Aside______________________________________________________________________________*/
+        aside{
+            display: none;
+        }
+        
+        /* Fin Aside______________________________________________________________________________*/
+     /*Fin Contenido ______________________________________________________________________________*/
+
+    /*Inicio Footer ______________________________________________________________________________*/
+        footer{
+            font-size: 11px;
+            padding-left: 10px;
+        }
+    /*Fin Footer ______________________________________________________________________________*/
+}
+
+@media screen and (min-width: 768px) {    
+    /*Inicio Header ______________________________________________________________________________*/
+        header{
+            display: grid;
+            grid-template-columns: 80px 1fr 250px;
+            grid-template-rows: 1fr;
+        }
+        #bmenu{
+            display: none;
+        }
+        #logo{
+            grid-column: 1/2;
+            grid-row: 1/2;
+            width: 80px;
+        }
+        #titulo{
+            grid-column: 2/3;
+            grid-row: 1/2;
+            font-size: 50px;
+            margin: 10px;
+            margin-left: 40px;
+        }
+        .buscar{  
+            grid-column: 3/4;
+            grid-row: 1/2; 
+            display: grid;
+            margin: auto; 
+            grid-template-columns: 20px 1fr 20px;
+            grid-template-rows: 1fr;
+            grid-template-areas: 
+            'lupa search cerrar';
+        }
+        #lupa{
+            display: block;
+            width: 18px;    
+            grid-area: lupa;
+            position: relative;
+            left: 28px;
+        }
+        #lupa:hover{
+            cursor: pointer;
+        }
+        #search{
+            display: block;
+            border-radius: 15px;
+            width: 150px;
+            height: 20px;
+            padding: 0px 25px;
+            font-size: 11px;
+            grid-area: search;    
+        }
+        #cerrar{   
+            display: block;
+            width: 18px;       
+            grid-area: cerrar;
+            position: relative;
+            right: 28px;
+        }
+        #cerrar:hover{
+            cursor: pointer;
+        }
+    /*Fin Header ______________________________________________________________________________*/
+
+
+    /*Inicio Nav ______________________________________________________________________________*/
+        nav{
+            display: block;
+        }
+    /*Fin Nav ______________________________________________________________________________*/
+    
+    /*Inicio Contenido ______________________________________________________________________________*/
+    #contenido{
+        display: grid;
+        grid-template-columns: 1fr 240px;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "main aside"
+    }
+    /*Fin Contenido ______________________________________________________________________________*/
+
+
+    /*Inicio Main ______________________________________________________________________________*/
+        main{
+            padding: 15px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 50px 1fr; 
+        }
+        .home{
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+        .primera{
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+        .segunda{
+            grid-column: 2/3;
+            grid-row: 2/3;
+        }
+    /*Fin Main ______________________________________________________________________________*/
+    
+    /*Inicio aside ______________________________________________________________________________*/
+    aside{
+        display: block;
+    }
+    
+    
+    
+    /*Fin aside ______________________________________________________________________________*/
+
+
+    /*Inicio Footer ______________________________________________________________________________*/
+        footer{
+            font-size: 16px;
+            padding-left: 15px;
+        }
+    /*Fin Footer ______________________________________________________________________________*/
+
+}
+
+@media screen and (min-width: 1012px){
+    /*Inicio Header ______________________________________________________________________________*/
+        header{
+            display: grid;
+            grid-template-columns: 108px 1fr 250px;
+            grid-template-rows: 1fr;
+            grid-template-areas: 
+            'logo titulo busqueda';
+        }
+        #logo{
+            grid-area: logo;
+            width: 108px;
+        }
+        #titulo{            
+            font-size: 80px;
+            margin: 10px;
+            margin-left: 40px;
+        }
+    /*Fin Header ______________________________________________________________________________*/
+
+}

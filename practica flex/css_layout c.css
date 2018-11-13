@@ -1,0 +1,21 @@
+nav{
+    border: 1px greenyellow solid;
+    background-color: rgb(189, 199, 153);    
+    border-radius: 15px;
+    width: 95%;     
+    margin-left: 2.5%;
+}
+aside{
+    flex: 2 1 20%;
+    margin: 0 0.5% 0 2.5%;
+    order: 1;
+}
+
+main{
+    flex: 8 1 80%;  
+    order: 2;
+}
+div{
+    display: flex;    
+    width: 97%;
+}

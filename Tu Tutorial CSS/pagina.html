@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>Tu Tutorial CSS</title>
+    
+    <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <link rel="stylesheet" href="pagina.css" />       
+    <script src="tuTutorialCss.js"></script>
+</head>
+<body>    
+    <header>
+        <div id='bmenu'></div>
+        <img src="img/Logo.png" id="logo">
+        <p id='titulo'>Tu Tutorial CSS</p>
+        <div class="buscar">
+            <img src="img/lupa.png" class="lupa">
+            <input type="text" class="search" id="search">        
+            <img src="img/cerrar.png" class="cerrar" onclick="borrar()">
+        </div>
+    </header>
+
+    <div id="mostrar_menu">
+        <div class="buscar">
+            <img src="img/lupa.png" class="lupa">
+            <input type="text" class="search"  id="search2">        
+            <img src="img/cerrar.png" class="cerrar" onclick="borrar2()">
+        </div>
+        <ul id="menu">
+            <li>
+                <h2><a href="">Capitulo 1</a></h2>                
+                <ul>
+                    <li><h3><a href="">Capitulo 1.1</a></h3></li>
+                    <li><h3><a href="">Capitulo 1.2</a></h3></li>
+                </ul>
+            </li>
+            <li><h2><a href="">Capitulo 2</a></h2></li>
+            <li><h2><a href="">Capitulo 3</a></h2></li>
+            <li>
+                <h2><a href="">Capitulo 4</a></h2>                    
+                <ul>
+                    <li><h3><a href="">Capitulo 4.1</a></h3></li>
+                    <li><h3><a href="">Capitulo 4.2</a></h3></li>
+                </ul>
+            </li>
+            <li><h2><a href="">Capitulo 5</a></h2>                    
+                <ul>
+                    <li><h3><a href="">Capitulo 5.1</a></h3></li>
+                </ul>
+            </li>           
+            <li><h2><a href="">Capitulo 6</a></h2></li>
+            <li>
+                <h2><a href="">Capitulo 7</a></h2>                    
+                <ul>
+                    <li><h3><a href="">Capitulo 7.1</a></h3></li>
+                    <li><h3><a href="">Capitulo 7.2</a></h3></li>
+                </ul>
+            </li>
+            <li><h2><a href="">Capitulo 8</a></h2>                    
+                <ul>
+                    <li><h3><a href="">Capitulo 8.1</a></h3></li>
+                </ul>
+            </li>            
+            <li><h2><a href="">Capitulo 9</a></h2></li>
+            <li><h2><a href="">Capitulo 10</a></h2>                    
+                <ul>
+                    <li><h3><a href="">Capitulo 10.1</a></h3></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <nav>
+        <p><i>Home/<a href=""></a></i></p>
+    </nav>
+    
+    <div id="contenido">
+        <main>
+            main
+        </main>
+        <aside>
+            <ul>
+                <li>
+                    <h2><a href="">Capitulo 1</a></h2>                
+                    <ul>
+                        <li><h3><a href="">Capitulo 1.1</a></h3></li>
+                        <li><h3><a href="">Capitulo 1.2</a></h3></li>
+                    </ul>
+                </li>
+                <li><h2><a href="">Capitulo 2</a></h2></li>
+                <li><h2><a href="">Capitulo 3</a></h2></li>
+                <li>
+                    <h2><a href="">Capitulo 4</a></h2>                    
+                    <ul>
+                        <li><h3><a href="">Capitulo 4.1</a></h3></li>
+                        <li><h3><a href="">Capitulo 4.2</a></h3></li>
+                    </ul>
+                </li>
+                <li><h2><a href="">Capitulo 5</a></h2>                    
+                    <ul>
+                        <li><h3><a href="">Capitulo 5.1</a></h3></li>
+                    </ul>
+                </li>           
+                <li><h2><a href="">Capitulo 6</a></h2></li>
+                <li>
+                    <h2><a href="">Capitulo 7</a></h2>                    
+                    <ul>
+                        <li><h3><a href="">Capitulo 7.1</a></h3></li>
+                        <li><h3><a href="">Capitulo 7.2</a></h3></li>
+                    </ul>
+                </li>
+                <li><h2><a href="">Capitulo 8</a></h2>                    
+                    <ul>
+                        <li><h3><a href="">Capitulo 8.1</a></h3></li>
+                    </ul>
+                </li>            
+                <li><h2><a href="">Capitulo 9</a></h2></li>
+                <li><h2><a href="">Capitulo 10</a></h2>                    
+                    <ul>
+                        <li><h3><a href="">Capitulo 10.1</a></h3></li>
+                    </ul>
+                </li>
+            </ul>
+        </aside>
+    </div>
+
+
+    <footer>
+        <p>Creadores: Jose Ramón Cabrera Roig / Luis Marcos Dasi / Juan Borredá Marin</p>
+    </footer>
+    
+    <script type="text/javascript" src="mostrar-nav.js"></script>
+</body>
+</html>

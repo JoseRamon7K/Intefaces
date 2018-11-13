@@ -1,0 +1,25 @@
+
+aside{
+    width: 15%;
+    margin-left: 2.5%;    
+    float: left;
+}
+
+main{
+    width: 80%;     
+    margin-left: 18%;
+    padding: 2px;
+}
+section{
+    border: 1px green solid;
+    background-color: rgb(108, 235, 240);    
+    border-radius: 5px;
+    width:80%;
+}
+#lateral{
+    border: 1px green solid;
+    background-color: rgb(110, 25, 25);    
+    border-radius: 5px;
+    width:20%;
+    float: right;
+}

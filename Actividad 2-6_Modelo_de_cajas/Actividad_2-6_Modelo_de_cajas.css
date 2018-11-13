@@ -1,0 +1,117 @@
+/* === IMPORTANTE ===
+   No modificar estos estilos, ya que son imprescindibles para
+   que la página se vea correctamente.
+   ================= */
+ 
+/*-- Básico ----------------------------------------------------------*/
+ul,ul li{
+	margin:0;
+	padding:0;
+	list-style:none;
+	}
+h1,h2,h3,p,form{
+	margin:0;
+	padding:0;
+	}
+.clear{clear:both;}
+img{border:none;}
+/*-- Layout ----------------------------------------------------------*/
+#contenedor{
+	width:90%;
+	max-width:900px;
+	margin:0 auto;
+	}
+header,nav,aside,#contenido,#contenido main,#contenido #secundario,footer{border:2px solid #777;}
+header{clear:both;
+}
+nav{clear:both;
+}
+aside{
+	float:left;
+	width:20%;
+	}
+#contenido{
+	float:right;
+	width:78%;
+	}
+#contenido main{
+	float:left;
+	width:78%;
+	}
+#contenido #secundario{
+	float:right;
+	width:20%;
+	}
+footer{clear:both;}
+div #contenido{
+	width: 77%;
+}
+main{
+	width: 73%;
+}
+/*-- Cabecera --------------------------------------------------------*/
+header #logo{float:left;}
+header #buscador{float:right;}
+/*-- Menu ------------------------------------------------------------*/
+nav ul#menu_principal li{
+	display:inline;
+	float:left;
+	}
+/*-- Sección Principal -----------------------------------------------*/
+#contenido main article img{width:100px;float:left;}
+/*-- Pie de página ---------------------------------------------------*/
+footer .enlaces{float:left;}
+footer .copyright{float:right;}
+
+/* === IMPORTANTE ===
+   A partir de aquí, se pueden añadir todos los estilos propios que 
+   sean necesarios. Os dejo las primeras líneas a modo de ejemplo.
+   Obviamente las podríamos unir por selectores pero prefiero agruparlas en función de los enunciados de la actividad.
+   ================= */
+
+/*-- Márgenes y rellenos -----------------------------------------------*/
+header {padding: 1em}
+nav{
+	margin: 0.4em;
+}
+nav,#noticias,#publicidad,main,#secundario{
+	padding: 0.5em;
+}
+footer{
+	padding-top: 0.5em;
+}
+article{
+	margin: 1em;
+}
+article img{
+	margin: 0.5em;
+}
+#publicidad,footer{
+	margin-top: 1em;
+}
+
+/*-- Bordes ------------------------------------------------------------*/
+aside, header, footer, nav, #noticias, #publicidad, main, #secundario{border:none;}
+nav{
+	border-bottom: 0.9px solid #004C99;
+}
+#noticias{
+	border: 1px solid #C5C5C5;
+}
+#publicidad{
+	border: 1px dashed #CC6600;
+}
+#secundario{
+	border: 1px solid #CC6600;
+}
+footer{	
+	border-top: 1px solid #C5C5C5;
+	border-bottom: 1px solid #C5C5C5;
+}
+/*-- Colores e imágenes -----------------------------------------------*/
+#noticias, footer{background-color: #F8F8F8;}
+#publicidad{
+	background-color: #FFF6CD;
+}
+
+

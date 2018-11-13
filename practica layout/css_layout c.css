@@ -1,0 +1,17 @@
+nav{
+    border: 1px greenyellow solid;
+    background-color: rgb(189, 199, 153);    
+    border-radius: 15px;
+    width: 95%;     
+    margin-left: 2.5%;
+}
+aside{
+    width: 15%;
+    margin-left: 2.5%;    
+    float: left;
+}
+
+main{
+    width: 81.5%;     
+    margin-left: 18%    
+}

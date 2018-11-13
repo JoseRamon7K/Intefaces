@@ -1,0 +1,71 @@
+<html>
+<head>
+<title>Actividad 2.9</title>
+<style>
+.uno{
+    background-color: #606; 
+    padding:10px; 
+    width: 300px;    }
+.dos{
+    position: absolute; 
+    width: 300px; 
+    padding: 10px; 
+    background-color: #066; 
+    top:100px; 
+    left: 322px;}
+.tres{
+    position: relative; 
+    width: 300px; 
+    padding: 10px; 
+    background-color: #033; 
+    top:0px; 
+    left: 30px;    }
+.cuatro{
+    position: fixed; 
+    width: 300px; 
+    padding: 10px; 
+    background-color: #096; 
+    top:10px; 
+    left: 30px;    }
+.cinco{
+    position: absolute; 
+    width: 350px; 
+    height:100px; 
+    padding: 10px; 
+    background-color: #666; 
+    top:300px; 
+    left: 500px;}
+.seis{
+    position: absolute; 
+    width: 300px; 
+    padding: 10px; 
+    background-color: #111; 
+    top:0px; 
+    left: 5px;}
+</style>
+</head>
+<body>
+<h1>NO define posición</h1>
+<div class="uno">
+    No define posición, por lo que es static
+</div>
+<div class="dos">
+    Capa Absoluta (sólo tiene como contenedor a "body") por lo tanto es relativa a body.
+</div>
+<div class="tres">
+    Capa de posicionamiento relative. Se coloca según la posición que le tocaría en el flujo HTML.
+</div>
+<div class="cuatro">
+    Capa Fija se coloca como una absoluta
+</div>
+
+<div class="cinco">
+    <div class="seis">
+        Capa absoluta, se referencia según a su contenedor porque no es un static
+    </div>
+</div>
+
+<h2>La última en ponerse</h2>
+</body>
+</html>
+
