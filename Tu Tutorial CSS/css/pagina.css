@@ -4,6 +4,9 @@ body{
 
 }
 
+.imagen{
+    width: 110%;
+}
 #arriba{
     width: 40px;
     position: fixed;
@@ -74,7 +77,8 @@ main{
 #inicio{
     grid-column: 1/3;
     grid-row: 2/3;
-    margin: 0px 50px;
+    margin: 0px 50px;    
+    width: 80%;
 }    
 
 a:hover{
@@ -120,6 +124,9 @@ footer{
     #arriba{
         display: none;
     }
+    .example{
+        width: 75%;
+    }    
     /*Inicio Header ______________________________________________________________________________*/
         header{
             grid-area: header;
@@ -197,8 +204,7 @@ footer{
     /*Fin Nav ______________________________________________________________________________*/
     
     /*Menu__________________________________*/
-    /*INICIO MENU*/
-
+    /*INICIO MENU*/        
         #menu{
             list-style:none;
             line-height: 42px;
@@ -275,16 +281,17 @@ footer{
             grid-template-rows: 1fr;
             grid-template-areas: 
             "main";
-
         }
    
 
         /*Inicio Main ______________________________________________________________________________*/
             main{
                 grid-area: main;
-                padding: 10px;
+                padding: 10px;                
             }        
-            
+            #inicio{
+                width: 80%;
+            }
         /*Fin Main ______________________________________________________________________________*/
         
         /* Inicio Aside______________________________________________________________________________*/
@@ -306,6 +313,9 @@ footer{
 @media screen and (min-width: 768px) {    
     #arriba{
         display: block;
+    }
+    .example{
+        width: 250px;
     }
     /*Inicio Header ______________________________________________________________________________*/
         header{
@@ -386,15 +396,6 @@ footer{
     }
     /*Fin Contenido ______________________________________________________________________________*/
 
-
-    /*Inicio Main ______________________________________________________________________________*/
-        main{
-            padding: 15px;            
-        }
-        
-        
-    /*Fin Main ______________________________________________________________________________*/
-    
     /*Inicio aside ______________________________________________________________________________*/
     aside{
         display: block;

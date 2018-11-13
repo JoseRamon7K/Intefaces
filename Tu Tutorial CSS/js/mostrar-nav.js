@@ -9,3 +9,7 @@ $(window).resize(function() {
   }
   console.log(ancho);
 });
+
+function fueraMenu(){
+  $('#mostrar_menu').removeClass('mostrar');
+}
