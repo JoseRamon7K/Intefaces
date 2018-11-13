@@ -9,6 +9,8 @@
     <script src="js/tuTutorialCss.js"></script>
 </head>
 <body>    
+    <a href="#titulo"><img src="img/arriba.png" id="arriba"></a>
+    
     <header>
         <div id='bmenu'></div>
         <img src="img/Logo.png" id="logo">
@@ -28,10 +30,9 @@
         </div>
         <ul id="menu">
             <li>
-                <h2><a href="">Capitulo 1</a></h2>                
+                <h2><a href="box_model.html">1.-CSS Box Model</a></h2>                
                 <ul>
-                    <li><h3><a href="">Capitulo 1.1</a></h3></li>
-                    <li><h3><a href="">Capitulo 1.2</a></h3></li>
+                    <li><h3><a href="box_model.html#cap1">1.1.-Width and Height of an Element</a></h3></li>
                 </ul>
             </li>
             <li><h2><a href="">Capitulo 2</a></h2></li>
@@ -71,20 +72,95 @@
     </div>
 
     <nav>
-        <p><i>Home/<a href=""></a></i></p>
+        <p><i><a href="tuTutorialCss.html">Home</a>/Box Model</i></p>
     </nav>
     
     <div id="contenido">
         <main>
-            main
+            <h1 id="capitulo">CSS Box Model</h1>
+            <div id="inicio">
+                <br>
+                
+                <p>All HTML elements can be considered as boxes. In CSS, the term "box model" is used when talking about design and layout.<br>
+
+                The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content. The image below illustrates the box model:</p>
+                <br>
+                
+                <img src="img/box/schema.png" />
+                <br>
+                
+                <p>Explanation of the different parts:</p>
+                <br>
+                
+                <ul>
+                    <li>
+                    <b>Content</b> - The content of the box, where text and images appear
+                    </li>
+                    <li>
+                    <b>Padding</b> - Clears an area around the content. The padding is transparent
+                    </li>
+                    <li>
+                    <b>Border</b> - A border that goes around the padding and content
+                    </li>
+                    <li>
+                    <b>Margin</b> - Clears an area outside the border. The margin is transparent
+                    </li>		
+                </ul>
+                <br>
+                
+                <p>The box model allows us to add a border around elements, and to define space between elements.</p>
+                <br>
+                
+                <div class="panel">
+                <img src="img/box/code1.png" />
+                </div>
+                <br>
+                
+                <h2 class="subcap" id="cap1">Width and Height of an Element</h2>
+                <br>
+                
+                <p>In order to set the width and height of an element correctly in all browsers, you need to know how the box model works.
+                Assume we want to style a &lt;div&gt; element to have a total width of 350px:
+                </p>
+                <br>
+                
+                <div class="panel">
+                    <img src="img/box/code2.png" />
+                </div>
+                <br>
+                
+                <p>Here is the calculation:</p>
+                <br>
+
+                <div class="panel">
+                    <p>
+                        320px (width)<br>
+                        + 20px (left + right padding)<br>
+                        + 10px (left + right border)<br>
+                        + 0px (left + right margin)<br>
+                        <b>= 350px</b>
+                    </p>
+                </div>
+                <br>
+                
+                
+                <p>The total width of an element should be calculated like this:<br>
+
+                Total element width = width + left padding + right padding + left border + right border + left margin + right margin<br>
+                <br>
+
+                The total height of an element should be calculated like this:<br>
+
+                Total element height = height + top padding + bottom padding + top border + bottom border + top margin + bottom margin</p>
+                <br>
+            </div>   
         </main>
         <aside>
             <ul>
                 <li>
-                    <h2><a href="">Capitulo 1</a></h2>                
+                    <h2><a href="box_model.html">1.-CSS Box Model</a></h2>                
                     <ul>
-                        <li><h3><a href="">Capitulo 1.1</a></h3></li>
-                        <li><h3><a href="">Capitulo 1.2</a></h3></li>
+                        <li><h3><a href="box_model.html#cap1">1.1.-Width and Height of an Element</a></h3></li>
                     </ul>
                 </li>
                 <li><h2><a href="">Capitulo 2</a></h2></li>

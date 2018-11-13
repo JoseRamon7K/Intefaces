@@ -1,6 +1,14 @@
 body{
     margin: 1px;
     font-family: Georgia;
+
+}
+
+#arriba{
+    width: 40px;
+    position: fixed;
+    bottom: 80px;
+    right: 280px;
 }
 /*Inicio Header ______________________________________________________________________________*/
 header{
@@ -12,6 +20,7 @@ header{
 #titulo{
     color: white;
     grid-area: titulo;
+    text-align: center;
 }
 
 /*Fin Header ______________________________________________________________________________*/
@@ -21,23 +30,80 @@ nav{
     margin-left: 15px;
 }
 /*Fin Nav ______________________________________________________________________________*/
+/*Inicio Contenido ______________________________________________________________________________*/
+#contenido{
+    display: grid;
+    grid-template-columns: 1fr 240px;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "main aside"
+}
+/*Fin Contenido ______________________________________________________________________________*/
 
 /*Inicio Main ______________________________________________________________________________*/
 main{
     border-top: 3px black solid;  
     background-color: rgba(204, 255, 255,0.55);
     width: 93%;
+    grid-area: main;
     margin: auto;
-    color: black; 
+    margin-top: 5px;
+    color: black;
+    padding: 200px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr ;
 }
+.panel{
+    border: 1px green solid;
+    border-left: 3px green solid;
+    background-color: white;
+    padding-left: 15px; 
+}
+.subcap{    
+    margin: 0px -20px;
+    color: red;
+}
+#capitulo{
+    grid-column: 1/2;
+    grid-row: 1/2;                
+    margin:15px;
+    color: red;
+    text-decoration: underline;
+}    
+#inicio{
+    grid-column: 1/3;
+    grid-row: 2/3;
+    margin: 0px 50px;
+}    
+
 a:hover{
     color: blue;
 }
-.home{
-    color: red;
-    text-decoration: underline;
-}
 /*Fin Main ______________________________________________________________________________*/
+
+/*Inicio Aside ______________________________________________________________________________*/
+
+aside{
+    grid-area: aside;
+    margin-top: 5px;
+    border: 1px dotted blue;
+    margin-bottom: auto;
+    padding-bottom: 10px;
+}
+aside ul{
+    list-style: none;
+}
+aside ul a{
+    text-decoration: none;
+    color: black;
+}
+aside ul li ul a{
+    text-decoration: none;
+    color: rgb(0, 133, 241);
+}
+
+/*Fin Aside ______________________________________________________________________________*/
 
 
 /*Inicio Footer ______________________________________________________________________________*/
@@ -51,6 +117,9 @@ footer{
 
 
 @media screen and (min-width: 0px){
+    #arriba{
+        display: none;
+    }
     /*Inicio Header ______________________________________________________________________________*/
         header{
             grid-area: header;
@@ -118,6 +187,7 @@ footer{
         .cerrar:hover{
             cursor: pointer;
         }
+        
     /*Fin Header ______________________________________________________________________________*/
     
     /*Inicio Nav ______________________________________________________________________________*/
@@ -125,11 +195,47 @@ footer{
             display:none;
         }
     /*Fin Nav ______________________________________________________________________________*/
-    /*Menu__________________________________*/    
+    
+    /*Menu__________________________________*/
+    /*INICIO MENU*/
+
+        #menu{
+            list-style:none;
+            line-height: 42px;
+            margin: 2em auto;
+            /*outline: 1px solid red;*/
+            padding-left: 0px;
+            width: 15em;
+            font-weight: bold;
+        }
+        
+        #menu a{
+            color:#ddd;
+            display:block;
+            text-decoration: none;
+            text-transform: Uppercase;
+            width: 100%;
+        } 
+        
+        #menu li{
+            /*outline: 1px solid green;*/
+            box-shadow:3px 0 rgba(51,51,255,.8) inset;
+            margin-bottom: 5px;
+            padding-left: 1.5em;
+            --webkit-transition:all .5s;
+            -o-transition: .5s ease;
+            transition: .5s ease;
+        }
+        
+        #menu li:hover{
+            box-shadow:15em 0 rgba(0,133,224,.8) inset;
+        }
+        
+    /*FIN MENU*/
     /*POSICION RESPONSIVE MENU*/
         #mostrar_menu .buscar{
             margin: 15px auto;
-            margin-bottom: 20px;
+            margin-bottom: 0px;
         }
         #mostrar_menu div~ul{
             margin: -10px auto;
@@ -155,36 +261,39 @@ footer{
             cursor:pointer;
             z-index:30; 
             width: 30px;
-            height: 30px;           
-            background-image: url(./img/menu-icon.png);
+	        height: 30px;           
+	        background-image: url(../img/menu-icon.png);
         }
         
-    /*POSICION MENU*/
-    /*Menu______________________________________________________*/
+  /*POSICION MENU*/
+  /*Menu______________________________________________________*/
 
-    /*Inicio Main ______________________________________________________________________________*/
-        main{
-            grid-area: main;
-            padding: 10px;
+    /*Inicio Contenido ______________________________________________________________________________*/
+        #contenido{
             display: grid;
             grid-template-columns: 1fr;
-            grid-template-rows: 40px 1fr 1fr; 
-        }
-        .home{
-            grid-column: 1/2;
-            grid-row: 1/2;
-        }
-        .primera{
-            grid-column: 1/2;
-            grid-row: 2/3;
-        }
-        .segunda{
-            margin-top: -25px;
-            grid-column: 1/2;
-            grid-row: 3/4;
-        }
-    /*Fin Main ______________________________________________________________________________*/
+            grid-template-rows: 1fr;
+            grid-template-areas: 
+            "main";
 
+        }
+   
+
+        /*Inicio Main ______________________________________________________________________________*/
+            main{
+                grid-area: main;
+                padding: 10px;
+            }        
+            
+        /*Fin Main ______________________________________________________________________________*/
+        
+        /* Inicio Aside______________________________________________________________________________*/
+        aside{
+            display: none;
+        }
+        
+        /* Fin Aside______________________________________________________________________________*/
+     /*Fin Contenido ______________________________________________________________________________*/
 
     /*Inicio Footer ______________________________________________________________________________*/
         footer{
@@ -195,6 +304,9 @@ footer{
 }
 
 @media screen and (min-width: 768px) {    
+    #arriba{
+        display: block;
+    }
     /*Inicio Header ______________________________________________________________________________*/
         header{
             display: grid;
@@ -247,7 +359,7 @@ footer{
             grid-area: search;    
         }
         .cerrar{   
-            width: 18px;    
+            width: 18px;       
             grid-area: cerrar;
             position: relative;
             right: 28px;
@@ -263,29 +375,31 @@ footer{
             display: block;
         }
     /*Fin Nav ______________________________________________________________________________*/
+    
+    /*Inicio Contenido ______________________________________________________________________________*/
+    #contenido{
+        display: grid;
+        grid-template-columns: 1fr 240px;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "main aside"
+    }
+    /*Fin Contenido ______________________________________________________________________________*/
 
 
     /*Inicio Main ______________________________________________________________________________*/
         main{
-            padding: 15px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 50px 1fr; 
+            padding: 15px;            
         }
-        .home{
-            grid-column: 1/2;
-            grid-row: 1/2;
-        }
-        .primera{
-            grid-column: 1/2;
-            grid-row: 2/3;
-        }
-        .segunda{            
-            margin-top: 15px;
-            grid-column: 2/3;
-            grid-row: 2/3;
-        }
+        
+        
     /*Fin Main ______________________________________________________________________________*/
+    
+    /*Inicio aside ______________________________________________________________________________*/
+    aside{
+        display: block;
+    }
+    /*Fin aside ______________________________________________________________________________*/
 
 
     /*Inicio Footer ______________________________________________________________________________*/
@@ -297,7 +411,7 @@ footer{
 
 }
 
-@media screen and (min-width: 1012px){
+@media screen and (min-width: 1165px){
     /*Inicio Header ______________________________________________________________________________*/
         header{
             display: grid;
@@ -307,7 +421,7 @@ footer{
             'logo titulo busqueda';
         }
         #logo{
-            grid-area: 'logo';
+            grid-area: logo;
             width: 108px;
         }
         #titulo{            
