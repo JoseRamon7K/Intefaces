@@ -1,12 +1,5 @@
 body{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 50px, 50px,1fr,50px;
-    grid-template-areas: 
-    'header'
-    'nav'
-    'main'
-    'footer';
+    margin: 1px;
     font-family: Georgia;
 }
 /*Inicio Header ______________________________________________________________________________*/
@@ -14,19 +7,17 @@ header{
     border: 1px black solid;    
     background-color: #3333FF ;
     width: 99%;
-    grid-area: 'header';
     padding: 5px;
 }
 #titulo{
     color: white;
-    grid-area: 'titulo';
+    grid-area: titulo;
 }
 
 /*Fin Header ______________________________________________________________________________*/
 /*Inicio Nav ______________________________________________________________________________*/
 nav{  
     width: 99%;
-    grid-area: 'nav';
     margin-left: 15px;
 }
 /*Fin Nav ______________________________________________________________________________*/
@@ -36,7 +27,6 @@ main{
     border-top: 3px black solid;  
     background-color: rgba(204, 255, 255,0.55);
     width: 93%;
-    grid-area: 'main';
     margin: auto;
     color: black; 
 }
@@ -56,7 +46,6 @@ footer{
     background-color: rgba(0, 0, 0,0.8);
     color: white;
     width: 99%;
-    grid-area: 'footer';
 }
 /*Fin Footer ______________________________________________________________________________*/
 
@@ -64,7 +53,7 @@ footer{
 @media screen and (min-width: 0px){
     /*Inicio Header ______________________________________________________________________________*/
         header{
-            grid-area: 'header';
+            grid-area: header;
             display: grid;
             grid-template-columns: 40px 1fr 50px; 
             grid-template-rows: 1fr;   
@@ -73,7 +62,7 @@ footer{
             grid-column: 1/2;
             grid-row: 1/2;
             width: 30px;
-            display: inherit;
+            display: block;
             margin-top: 10px;
         }
         #logo{
@@ -87,44 +76,46 @@ footer{
             font-size: 30px;
             margin: 10px 0px;
         }
+        header.buscar{            
+            grid-area: busqueda;
+        }
         .buscar{    
-            grid-area: 'busqueda';
             display: grid;
             grid-template-columns: 20px 1fr 20px;
             grid-template-rows: 1fr;
             grid-template-areas: 
             'lupa search cerrar';
         }
-        #lupa{
+        header .buscar img.lupa,header .buscar input.search,header .buscar img.cerrar{
             display: none;
+        }
+        .lupa{
             width: 18px;    
             margin: auto;
-            grid-area: 'lupa';
+            grid-area: lupa;
             position: relative;
             left: 28px;
         }
-        #lupa:hover{
+        .lupa:hover{
             cursor: pointer;
         }
-        #search{
-            display: none;
+        .search{
             border-radius: 15px;
             width: 150px;
             height: 20px;
             margin: auto;
             padding: 0px 25px;
             font-size: 11px;
-            grid-area: 'search';    
+            grid-area: search;    
         }
-        #cerrar{   
-            display: none;
+        .cerrar{   
             width: 18px;       
             margin: auto; 
-            grid-area: 'cerrar';
+            grid-area: cerrar;
             position: relative;
             right: 28px;
         }
-        #cerrar:hover{
+        .cerrar:hover{
             cursor: pointer;
         }
     /*Fin Header ______________________________________________________________________________*/
@@ -134,10 +125,46 @@ footer{
             display:none;
         }
     /*Fin Nav ______________________________________________________________________________*/
+    /*Menu__________________________________*/    
+    /*POSICION RESPONSIVE MENU*/
+        #mostrar_menu .buscar{
+            margin: 15px auto;
+            margin-bottom: 20px;
+        }
+        #mostrar_menu div~ul{
+            margin: -10px auto;
+        }
+        #mostrar_menu{
+            background: rgba(0,0,0,.85);
+            box-sizing:border-box;
+            padding-right: .25em;
+            padding-top: 3em;
+            position: absolute;
+            top:0;
+            left:-18em;
+            z-index:20;
+            height:auto;
+            transition: .5s ease;
+        }
+        
+        #mostrar_menu.mostrar{
+            left:0em;            
+        }
+        
+        #bmenu{
+            cursor:pointer;
+            z-index:30; 
+            width: 30px;
+            height: 30px;           
+            background-image: url(./img/menu-icon.png);
+        }
+        
+    /*POSICION MENU*/
+    /*Menu______________________________________________________*/
 
     /*Inicio Main ______________________________________________________________________________*/
         main{
-            grid-area: 'main';
+            grid-area: main;
             padding: 10px;
             display: grid;
             grid-template-columns: 1fr;
@@ -152,6 +179,7 @@ footer{
             grid-row: 2/3;
         }
         .segunda{
+            margin-top: -25px;
             grid-column: 1/2;
             grid-row: 3/4;
         }
@@ -166,7 +194,7 @@ footer{
     /*Fin Footer ______________________________________________________________________________*/
 }
 
-@media screen and (min-width: 771px) {    
+@media screen and (min-width: 768px) {    
     /*Inicio Header ______________________________________________________________________________*/
         header{
             display: grid;
@@ -188,44 +216,43 @@ footer{
             margin: 10px;
             margin-left: 40px;
         }
-        .buscar{    
-            grid-area: 'busqueda';
+        header.buscar{  
+            grid-column: 3/4;
+            grid-row: 1/2; 
             display: grid;
+            margin: auto; 
             grid-template-columns: 20px 1fr 20px;
             grid-template-rows: 1fr;
             grid-template-areas: 
             'lupa search cerrar';
         }
-        #lupa{
-            display: inherit;
+        header .buscar img.lupa,header .buscar input.search,header .buscar img.cerrar{
+            display: block;
+        }
+        .lupa{
             width: 18px;    
-            margin: auto;
-            grid-area: 'lupa';
+            grid-area: lupa;
             position: relative;
             left: 28px;
         }
-        #lupa:hover{
+        .lupa:hover{
             cursor: pointer;
         }
-        #search{
-            display: inherit;
+        .search{
             border-radius: 15px;
             width: 150px;
             height: 20px;
-            margin: auto;
             padding: 0px 25px;
             font-size: 11px;
-            grid-area: 'search';    
+            grid-area: search;    
         }
-        #cerrar{   
-            display: inherit;
-            width: 18px;       
-            margin: auto; 
-            grid-area: 'cerrar';
+        .cerrar{   
+            width: 18px;    
+            grid-area: cerrar;
             position: relative;
             right: 28px;
         }
-        #cerrar:hover{
+        .cerrar:hover{
             cursor: pointer;
         }
     /*Fin Header ______________________________________________________________________________*/
@@ -233,7 +260,7 @@ footer{
 
     /*Inicio Nav ______________________________________________________________________________*/
         nav{
-            display: inherit;
+            display: block;
         }
     /*Fin Nav ______________________________________________________________________________*/
 
@@ -253,7 +280,8 @@ footer{
             grid-column: 1/2;
             grid-row: 2/3;
         }
-        .segunda{
+        .segunda{            
+            margin-top: 15px;
             grid-column: 2/3;
             grid-row: 2/3;
         }
