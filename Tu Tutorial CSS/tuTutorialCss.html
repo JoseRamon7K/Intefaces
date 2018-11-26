@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
     
 <head>
     <meta charset="utf-8" />    
@@ -10,24 +10,25 @@
     <link rel="stylesheet" href="css/tuTutorialCss.css" />    
     <script src="js/tuTutorialCss.js"></script>
 </head>
-<body>    
-    <header>
-        <div id='bmenu'></div>
-        <img src="img/Logo.png" id="logo">
-        <p id='titulo'>Your CSS Tutorial</p>
-        <div class="buscar">
-            <img src="img/lupa.png" class="lupa">
-            <input type="text" class="search">        
-            <img src="img/cerrar.png" class="cerrar" onclick="borrar()">
+<body>  
+        <header>
+            <div id='bmenu'></div>
+            <img src="img/Logo.png" id="logo"  alt="logo">
+            <p id='titulo'>Your CSS Tutorial</p>
+            <div class="buscar">
+                <img src="img/lupa.png" class="lupa" alt="lupa">
+                <input type="text" class="search" id="search">        
+                <img src="img/cerrar.png" class="cerrar" onclick="borrar()"  alt="clear">
+            </div>
+        </header>
+    
+        <div id="mostrar_menu">
+            <div class="buscar">
+                <img src="img/lupa.png" class="lupa"  alt="lupa2">
+                <input type="text" class="search"  id="search2">        
+                <img src="img/cerrar.png" class="cerrar" onclick="borrar2()"  alt="clear2">
+            </div>
         </div>
-    </header> 
-    <div id="mostrar_menu">
-        <div class="buscar">
-            <img src="img/lupa.png" class="lupa">
-            <input type="text" class="search"  id="search2">        
-            <img src="img/cerrar.png" class="cerrar" onclick="borrar2()">
-        </div>
-    </div>
     
     <nav>
         <p><i>Home/<a href=""></a></i></p>
@@ -37,13 +38,44 @@
         
         <h1 class='home'>Home</h1>        
         <ul class="primera">
-            <li>
-                <h2><a href="box_model.html">1.-CSS Box Model</a></h2>                
-                <ul>
-                    <li><h3><a href="box_model.html#cap1">1.1.-Width and Height of an Element</a></h3></li>
-                </ul>
-            </li>
-           
+                <li>
+                    <h3><a href="list.html">1.-CSS Lists</a></h3>                
+                    <ul>
+                        <li><h4><a href="list.html#cap1"  onclick="fueraMenu()">1.1.-Different List Item Markers</a></h4></li>
+                        <li><h4><a href="list.html#cap2"  onclick="fueraMenu()">1.2.-An Image as The List Item Marker</a></h4></li>
+                        <li><h4><a href="list.html#cap3"  onclick="fueraMenu()">1.3.-Position The List Item Markers</a></h4></li>
+                        <li><h4><a href="list.html#cap4"  onclick="fueraMenu()">1.4.-Remove Default Settings</a></h4></li>                    
+                        <li><h4><a href="list.html#cap5"  onclick="fueraMenu()">1.5.-List - Shorthand property</a></h4></li>
+                        <li><h4><a href="list.html#cap6"  onclick="fueraMenu()">1.6.-Styling List With Colors</a></h4></li>                    
+                    </ul>
+                </li>
+                
+                <li>
+                    <h3><a href="form.html">2.-Forms</a></h3>                
+                    <ul>
+                        <li><h4><a href="form.html#cap1"  onclick="fueraMenu()">2.1.-The &lt;input&gt; element</a></h4></li>
+                    </ul>
+                </li>
+                <li>
+                    <h3><a href="box_model.html">3.-CSS Box Model</a></h3>                
+                    <ul>
+                        <li><h4><a href="box_model.html#cap1"  onclick="fueraMenu()">3.1.-Width and Height of an Element</a></h4></li>
+                    </ul>
+                </li>            
+                <li>
+                    <h3><a href="grid-layout.html">4.-Grid Layout</a></h3>      
+                </li>
+                <li>
+                    <h3><a href="responsive.html">5.-Responsive</a></h3>                
+                    <ul>
+                        <li><h4><a href="responsive.html#cap1"  onclick="fueraMenu()">5.1.-Introduction</a></h4></li>
+                        <li><h4><a href="responsive.html#cap2"  onclick="fueraMenu()">5.2.-Grid-View</a></h4></li>
+                        <li><h4><a href="responsive.html#cap3"  onclick="fueraMenu()">5.3.-Building a Responsive Grid-View</a></h4></li>
+                        <li><h4><a href="responsive.html#cap4"  onclick="fueraMenu()">5.4.-Media Queries</a></h4></li>                    
+                        <li><h4><a href="responsive.html#cap5"  onclick="fueraMenu()">5.5.-Typical Device Breakpoints</a></h4></li>
+                        <li><h4><a href="responsive.html#cap6"  onclick="fueraMenu()">5.6.-Orientation: Portrait / Landscape</a></h4></li>                    
+                    </ul>
+                </li>
         </ul>
 
         <ul class="segunda">            
@@ -56,6 +88,6 @@
         <p>By: Jose Ramón Cabrera Roig / Luis Marcos Dasi / Juan Borredá Marin</p>
     </footer>
 
-    <script type="text/javascript" src="js/mostrar-nav.js"></script>
+    <script src="js/mostrar-nav.js"></script>
 </body>
 </html>

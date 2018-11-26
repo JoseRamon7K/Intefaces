@@ -4,9 +4,9 @@
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\Exception;
 
-    require 'phpmailer/PHPMailer/src/Exception.php';
-    require 'phpmailer/PHPMailer/src/PHPMailer.php';
-    require 'phpmailer/PHPMailer/src/SMTP.php';
+    require 'phpmailer/phpmailer/src/Exception.php';
+    require 'phpmailer/phpmailer/src/PHPMailer.php';
+    require 'phpmailer/phpmailer/src/SMTP.php';
 
     if (enviarEmail()) {        
         header('location:index2.html#otros');

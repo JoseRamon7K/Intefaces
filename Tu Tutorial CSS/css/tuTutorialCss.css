@@ -307,7 +307,7 @@ footer{
             'logo titulo busqueda';
         }
         #logo{
-            grid-area: 'logo';
+            grid-area: logo;
             width: 108px;
         }
         #titulo{            

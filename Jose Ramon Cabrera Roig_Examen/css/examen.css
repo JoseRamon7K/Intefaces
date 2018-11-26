@@ -1,0 +1,191 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(49, 49, 49);
+}
+#canvas{
+    max-width: 1220px;   
+    width: 1210px;
+    display: grid;
+    grid-gap: 2px;
+    
+    color: white;    
+    text-align: center;
+}
+p{
+    margin: auto;
+}
+/*Inicio Header _______________________________*/
+header{
+    background-color: blueviolet;
+    border: 1px black solid;
+}
+
+/*Inicio Nav _______________________________*/
+nav{
+    background-color: aqua;
+    border: 1px black solid;
+}
+/*Inicio Main _______________________________*/
+main{
+    background-color: rgb(86, 158, 240);
+    border: 1px black solid;
+}
+main div{    
+    height: 200px;
+    background-color: rgb(86, 158, 240);
+    border: 1px white solid;
+}
+/*Inicio Aside _______________________________*/
+aside{
+    background-color: aqua;
+    border: 1px black solid;
+}
+
+/*Inicio Footer _______________________________*/
+footer{
+    background-color: blueviolet;
+    border: 1px black solid;
+}
+
+@media screen and (min-width: 0px){
+    #canvas{
+        grid-template-columns: 1fr;
+        grid-template-rows: 30px 1fr 30px 30px;
+        
+    }
+    /*Inicio Header _______________________________*/
+    header{     
+        display: none;  
+    }
+    
+    /*Inicio Nav _______________________________*/
+    nav{        
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    /*Inicio Main _______________________________*/
+    main{        
+        grid-column: 1/2;
+        grid-row: 2/3;
+        display: flex;
+        flex-wrap: wrap;
+        
+        justify-content: space-around;
+    }
+    main div{
+        margin: 0px;
+        width: 100%;
+    }
+    /*Inicio Aside _______________________________*/
+    aside{        
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+    
+    /*Inicio Footer _______________________________*/
+    footer{
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+}
+@media screen and (min-width: 557px){
+    #canvas{
+        grid-template-columns: 1fr;
+        grid-template-rows: 30px 30px 1fr 80px 30px;
+        
+    }
+    /*Inicio Header _______________________________*/
+    header{     
+        display: block;   
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    
+    /*Inicio Nav _______________________________*/
+    nav{        
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    /*Inicio Main _______________________________*/
+    main{        
+        grid-column: 1/2;
+        grid-row: 3/4;
+        display: flex;
+        flex-wrap: wrap;
+        
+        justify-content: space-around;
+    }
+    main div{
+        margin: 4px;
+        width: 200px;
+    }
+    /*Inicio Aside _______________________________*/
+    aside{        
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+    
+    /*Inicio Footer _______________________________*/
+    footer{
+        grid-column: 1/2;
+        grid-row: 5/6;
+    }
+}
+@media screen and (min-width: 767px){
+    #canvas{
+        grid-template-columns: 150px 1fr;
+        grid-template-rows: 80px 1fr 80px 80px;
+        
+    }
+    /*Inicio Header _______________________________*/
+    header{        
+        grid-column: 1/3;
+        grid-row: 1/2;
+    }
+    
+    /*Inicio Nav _______________________________*/
+    nav{        
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    /*Inicio Main _______________________________*/
+    main{        
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    /*Inicio Aside _______________________________*/
+    aside{        
+        grid-column: 1/4;
+        grid-row: 3/4;
+    }
+    
+    /*Inicio Footer _______________________________*/
+    footer{
+        grid-column: 1/4;
+        grid-row: 4/5;
+    }
+}
+@media screen and (min-width: 991px){
+    #canvas{
+        grid-template-columns: 15% 1fr 15%;
+        grid-template-rows: 80px 1fr 80px;
+    }
+    /*Inicio Header _______________________________*/
+    header{
+        grid-column: 1/4;
+    }
+    /*Inicio Aside _______________________________*/
+    aside{
+        grid-column: 3/4;
+        grid-row: 2/3;
+    }
+    
+    /*Inicio Footer _______________________________*/
+    footer{
+        grid-row: 3/4;
+    }
+}

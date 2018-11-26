@@ -1,0 +1,56 @@
+.x50{
+    width: 90%;
+}
+.x30{
+    width: 80%;
+}
+.desktop{
+    width: 90%;
+}
+.container{
+        display:table ;
+}
+
+.row{
+    display: table-row;
+
+}
+.cell{
+    display: table-row;
+    padding: 10px;
+}
+
+#enviar{
+    width: 100%;
+}
+
+#formul th,#formul,#formul tr td{border: 1px black solid;}
+
+@media screen and (min-width: 400px) {   
+    .desktop{
+        width: auto;
+    }
+    
+    .row{
+        display: table-row;
+    
+    }
+    .cell{
+        display: table-cell;
+        padding: 10px;
+    }
+    
+    #enviar{
+        width: 100%;
+    }
+    
+}
+
+@media screen and (min-width: 768px) {   
+    .x50{
+        width:70%;
+    }
+    .x30{
+        width: 40%;
+    }   
+}

@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Your CSS Tutorial</title>
+    
+    <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <link rel="stylesheet" href="css/pagina.css" />    
+    <link rel="stylesheet" href="css/50x50.css" />     
+    <script src="js/tuTutorialCss.js"></script>
+</head>
+<body>    
+    <a href="#titulo"><img src="img/arriba.png" id="arriba"  alt="arriba"></a>
+    
+    <header>
+        <div id='bmenu'></div>
+        <img src="img/Logo.png" id="logo"  alt="logo">
+        <p id='titulo'>Your CSS Tutorial</p>
+        <div class="buscar">
+            <img src="img/lupa.png" class="lupa" alt="lupa">
+            <input type="text" class="search" id="search">        
+            <img src="img/cerrar.png" class="cerrar" onclick="borrar()"  alt="clear">
+        </div>
+    </header>
+
+    <div id="mostrar_menu">
+        <div class="buscar">
+            <img src="img/lupa.png" class="lupa"  alt="lupa2">
+            <input type="text" class="search"  id="search2">        
+            <img src="img/cerrar.png" class="cerrar" onclick="borrar2()"  alt="clear2">
+        </div>
+        <ul id="menu">
+                <li>
+                    <h3><a href="tuTutorialCss.html">Home</a></h3>      
+                </li>
+                <li>
+                    <h3><a href="list.html">1.-CSS Lists</a></h3>                
+                    <ul>
+                        <li><h4><a href="list.html#cap1"  onclick="fueraMenu()">1.1.-Different List Item Markers</a></h4></li>
+                        <li><h4><a href="list.html#cap2"  onclick="fueraMenu()">1.2.-An Image as The List Item Marker</a></h4></li>
+                        <li><h4><a href="list.html#cap3"  onclick="fueraMenu()">1.3.-Position The List Item Markers</a></h4></li>
+                        <li><h4><a href="list.html#cap4"  onclick="fueraMenu()">1.4.-Remove Default Settings</a></h4></li>                    
+                        <li><h4><a href="list.html#cap5"  onclick="fueraMenu()">1.5.-List - Shorthand property</a></h4></li>
+                        <li><h4><a href="list.html#cap6"  onclick="fueraMenu()">1.6.-Styling List With Colors</a></h4></li>                    
+                    </ul>
+                </li>
+                
+                <li>
+                    <h3><a href="form.html">2.-Forms</a></h3>                
+                    <ul>
+                        <li><h4><a href="form.html#cap1"  onclick="fueraMenu()">2.1.-The &lt;input&gt; element</a></h4></li>
+                    </ul>
+                </li>
+                <li>
+                    <h3><a href="box_model.html">3.-CSS Box Model</a></h3>                
+                    <ul>
+                        <li><h4><a href="box_model.html#cap1"  onclick="fueraMenu()">3.1.-Width and Height of an Element</a></h4></li>
+                    </ul>
+                </li>            
+                <li>
+                    <h3><a href="grid-layout.html">4.-Grid Layout</a></h3>      
+                </li>
+                <li>
+                    <h3><a href="responsive.html">5.-Responsive</a></h3>                
+                    <ul>
+                        <li><h4><a href="responsive.html#cap1"  onclick="fueraMenu()">5.1.-Introduction</a></h4></li>
+                        <li><h4><a href="responsive.html#cap2"  onclick="fueraMenu()">5.2.-Grid-View</a></h4></li>
+                        <li><h4><a href="responsive.html#cap3"  onclick="fueraMenu()">5.3.-Building a Responsive Grid-View</a></h4></li>
+                        <li><h4><a href="responsive.html#cap4"  onclick="fueraMenu()">5.4.-Media Queries</a></h4></li>                    
+                        <li><h4><a href="responsive.html#cap5"  onclick="fueraMenu()">5.5.-Typical Device Breakpoints</a></h4></li>
+                        <li><h4><a href="responsive.html#cap6"  onclick="fueraMenu()">5.6.-Orientation: Portrait / Landscape</a></h4></li>                    
+                    </ul>
+                </li>
+        </ul>
+    </div>
+
+    <nav>
+        <p><i><a href="tuTutorialCss.html">Home</a>/Responsive</i></p>
+    </nav>
+    
+    <div id="contenido">
+        <main>
+            <h1 id="capitulo">CSS Responsive</h1>
+            <div id="inicio">                
+                <br>
+                <h2 class="subcap" id="cap1">Introduction</h2>
+                <h3>What is Responsive Web Design?</h3>
+
+                <p>Responsive web design makes your web page look good on all devices.</p>
+
+                <p>Responsive web design uses only HTML and CSS.</p>
+
+                <p>Responsive web design is not a program or a JavaScript.</p>
+                <br>
+                
+                <h3>Designing For The Best Experience For All Users</h3>
+
+                <p>Web pages can be viewed using many different devices: desktops, tablets, and phones. Your web page should look good, and be easy to use, regardless of the device.</p>
+
+                <p>Web pages should not leave out information to fit smaller devices, but rather adapt its content to fit any device:</p>
+                
+                <img class='desktop img' src="img/responsive/desktop_ej.PNG" alt="desktop">
+                <img src="img/responsive/tablet_ej.PNG" alt="tablet">
+                <img src="img/responsive/phone_ej.PNG" alt="phone"> 
+
+                <p>It is called responsive web design when you use CSS and HTML to resize, hide, shrink, enlarge, or move the content to make it look good on any screen.</p>
+                <br>
+                <br>
+
+
+
+                <h2 class="subcap" id="cap2">Grid-View</h2>
+                <br>
+                <h3>What is a Grid-View?</h3>
+                <p>Many web pages are based on a grid-view, which means that the page is divided into columns:</p>
+                <img src="img/responsive/div_columna.PNG" alt="div_columna"  class="imagen">
+                <br>
+                <p>Using a grid-view is very helpful when designing web pages. It makes it easier to place elements on the page.</p>
+                <img src="img/responsive/grid_ej.PNG" alt="grid_ej" class="imagen">
+                <p>A responsive grid-view often has 12 columns, and has a total width of 100%, and will shrink and expand as you resize the browser window.</p>
+                <br>
+                <br>
+
+
+
+                <h2 class="subcap" id="cap3">Building a Responsive Grid-View</h2>
+                <p>Lets start building a responsive grid-view.</p>
+
+                <p>First ensure that all HTML elements have the <span class="tag">box-sizing</span> property set to <span class="tag">border-box</span>. This makes sure that the padding and border are included in the total width and height of the elements.</p>
+                
+                <p>Add the following code in your CSS:</p>
+                <div class="panel">
+                    <p>
+                        <span class="selector">*</span>{<br>
+                            &emsp;&emsp;<span class="tag">box-sizing</span> : <span class="value">border-box</span>;<br>
+                        }
+                    </p>
+                </div>
+                <br>
+                <p>The following example shows a simple responsive web page, with two columns:</p>
+                <img src="img/responsive/25-75.PNG" alt="25/75" class="imagen">
+                <p>Example:</p>
+                <div class="panel">
+                    <p>
+                        <span class="selector">.menu</span>{<br>
+                            &emsp;&emsp;<span class="tag">width</span> : <span class="value">25%</span>;<br>
+                            &emsp;&emsp;<span class="tag">float</span> : <span class="value">left</span>;<br>
+                        }<br>
+                        <span class="selector">.main</span>{<br>
+                            &emsp;&emsp;<span class="tag">width</span> : <span class="value">75%</span>;<br>                            
+                            &emsp;&emsp;<span class="tag">float</span> : <span class="value">left</span>;<br>
+                        }
+                    </p>
+                </div>
+                <br>
+                <br>
+
+                <h2 class="subcap" id="cap4">Media Queries</h2>
+                <h3>What is a Media Query?</h3>
+
+                <p>Media query is a CSS technique introduced in CSS3.</p>
+
+                <p>It uses the <span class="tag">@media</span> rule to include a block of CSS properties only if a certain condition is true.</p>
+                <p>Example</p>
+
+                <p>If the browser window is 600px or smaller, the background color will be lightblue:</p>
+                <div class="panel">
+                    <p>
+                        <span class="selector">@media only screen and (max-width: 600px)</span>{<br>
+                            &emsp;&emsp;<span class="selector">body</span>{<br>
+                                &emsp;&emsp;&emsp;&emsp;<span class="tag">background-color</span> : <span class="value">lightblue</span>;<br>                            
+                                
+                            &emsp;&emsp;}<br>
+                        }<br>
+                        
+                    </p>
+                </div>
+                <br>
+
+                <h3>Add a Breakpoint</h3>
+                <p>Earlier in this tutorial we made a web page with rows and columns, and it was responsive, but it did not look good on a small screen.</p>
+                <p>Media queries can help with that. We can add a breakpoint where certain parts of the design will behave differently on each side of the breakpoint.</p>
+                <img class='desktop' src="img/responsive/desktop_ej.PNG" alt="descktop">
+                <img src="img/responsive/phone_ej.PNG" alt="phone">
+                <p>Use a media query to add a breakpoint at 768px:</p>
+                <div class="panel">
+                        <p><span style="color:green;">/* For desktop: */</span><br>
+                            <span class="selector">.col-1 </span>{<span class="tag">width</span> : <span class="value">8.33%</span>;}<br>
+                            <span class="selector">.col-2 </span>{<span class="tag">width</span> : <span class="value">16.66%</span>;}<br>
+                            <span class="selector">.col-3 </span>{<span class="tag">width</span> : <span class="value">25%</span>;}<br>
+                            <span class="selector">.col-4 </span>{<span class="tag">width</span> : <span class="value">33.33%</span>;}<br>
+                            <span class="selector">.col-5 </span>{<span class="tag">width</span> : <span class="value">41.66%</span>;}<br>
+                            <span class="selector">.col-6 </span>{<span class="tag">width</span> : <span class="value">50%</span>;}<br>
+                            <span class="selector">.col-7 </span>{<span class="tag">width</span> : <span class="value">58.33%</span>;}<br>
+                            <span class="selector">.col-8 </span>{<span class="tag">width</span> : <span class="value">66.66%</span>;}<br>
+                            <span class="selector">.col-9 </span>{<span class="tag">width</span> : <span class="value">75%</span>;}<br>
+                            <span class="selector">.col-10 </span>{<span class="tag">width</span> : <span class="value">83.33%</span>;}<br>
+                            <span class="selector">.col-11 </span>{<span class="tag">width</span> : <span class="value">91.66%</span>;}<br>
+                            <span class="selector">.col-12 </span>{<span class="tag">width</span> : <span class="value">100%</span>;}<br>
+                            <br>
+                            
+                        <span style="color:green;">/* For mobile phones: */</span><br>
+                        <span class="selector">@media only screen and (max-width: 768px)</span>{<br>
+                            &emsp;&emsp;<span class="selector"> [class*="col-"]</span>{<br>
+                                &emsp;&emsp;&emsp;&emsp;<span class="tag">width</span> : <span class="value">100%</span>;<br>
+                            &emsp;&emsp;}<br>
+                        }<br>
+                        
+                    </p>
+                </div>
+                <br>
+                <img class="x50" src="img/responsive/big.PNG" alt="imgBig">                              
+                <br>              
+                <br>
+                <img class="x30" src="img/responsive/little.PNG" alt="imgLittle">
+                <br>
+
+                <h3>Always Design for Mobile First</h3>
+
+                <p>Mobile First means designing for mobile before designing for desktop or any other device (This will make the page display faster on smaller devices).</p>
+
+                <p>This means that we must make some changes in our CSS.</p>
+
+                <p>Instead of changing styles when the width gets smaller than 768px, we should change the design when the width gets larger than 768px. This will make our design Mobile First:</p>
+                <div class="panel">
+                    <p>
+                        <span style="color:green;">/* For mobile phones: */</span><br>
+                        
+                            <span class="selector"> [class*="col-"]</span>{<br>
+                                &emsp;&emsp;<span class="tag">width</span> : <span class="value">100%</span>;<br>
+                            }<br>
+                        
+                        <br>
+                        <span class="selector">@media only screen and (min-width: 768px)</span>{<br>
+                            &emsp;&emsp;<span style="color:green;">/* For desktop: */</span><br>
+                            &emsp;&emsp;<span class="selector">.col-1 </span>{<span class="tag">width</span> : <span class="value">8.33%</span>;}<br>
+                            &emsp;&emsp;<span class="selector">.col-2 </span>{<span class="tag">width</span> : <span class="value">16.66%</span>;}<br>
+                            &emsp;&emsp;<span class="selector">.col-3 </span>{<span class="tag">width</span> : <span class="value">25%</span>;}<br>
+                            &emsp;&emsp;<span class="selector">.col-4 </span>{<span class="tag">width</span> : <span class="value">33.33%</span>;}<br>
+                            &emsp;&emsp;<span class="selector">.col-5 </span>{<span class="tag">width</span> : <span class="value">41.66%</span>;}<br>
+                            &emsp;&emsp;<span class="selector">.col-6 </span>{<span class="tag">width</span> : <span class="value">50%</span>;}<br>
+                            &emsp;&emsp;<span class="selector">.col-7 </span>{<span class="tag">width</span> : <span class="value">58.33%</span>;}<br>
+                            &emsp;&emsp;<span class="selector">.col-8 </span>{<span class="tag">width</span> : <span class="value">66.66%</span>;}<br>
+                            &emsp;&emsp;<span class="selector">.col-9 </span>{<span class="tag">width</span> : <span class="value">75%</span>;}<br>
+                            &emsp;&emsp;<span class="selector">.col-10 </span>{<span class="tag">width</span> : <span class="value">83.33%</span>;}<br>
+                            &emsp;&emsp;<span class="selector">.col-11 </span>{<span class="tag">width</span> : <span class="value">91.66%</span>;}<br>
+                            &emsp;&emsp;<span class="selector">.col-12 </span>{<span class="tag">width</span> : <span class="value">100%</span>;}<br>
+                        }<br>                    
+                    </p>
+                </div>
+                <br>
+
+                <h3>Another Breakpoint</h3>
+
+                <p>You can add as many breakpoints as you like.</p>
+
+                <p>We will also insert a breakpoint between tablets and mobile phones.</p>
+
+                <img class='desktop' src="img/responsive/desktop_ej.PNG"  alt="desktop2">
+                <img src="img/responsive/tablet_ej.PNG"  alt="tablet2">
+                <img src="img/responsive/phone_ej.PNG"  alt="phone2">
+                <p>We do this by adding one more media query (at 600px), and a set of new classes for devices larger than 600px (but smaller than 768px):</p>
+                <div class="panel">
+                    <p>
+                        <span style="color:green;">/* For mobile phones: */</span><br>
+                        
+                            <span class="selector"> [class*="col-"]</span>{<br>
+                                &emsp;&emsp;<span class="tag">width</span> : <span class="value">100%</span>;<br>
+                            }<br>
+                        <br>
+                        <span class="selector">@media only screen and (min-width: 600px)</span>{<br>
+                            &emsp;&emsp;<span style="color:green;">/* For desktop: */</span><br>
+                            &emsp;&emsp;<span class="selector">.col-s-1 </span>{<span class="tag">width</span> : <span class="value">8.33%</span>;}<br>
+                            &emsp;&emsp;<span class="selector">.col-s-2 </span>{<span class="tag">width</span> : <span class="value">16.66%</span>;}<br>
+                            &emsp;&emsp;<span class="selector">.col-s-3 </span>{<span class="tag">width</span> : <span class="value">25%</span>;}<br>
+                            &emsp;&emsp;<span class="selector">.col-s-4 </span>{<span class="tag">width</span> : <span class="value">33.33%</span>;}<br>
+                            &emsp;&emsp;<span class="selector">.col-s-5 </span>{<span class="tag">width</span> : <span class="value">41.66%</span>;}<br>
+                            &emsp;&emsp;<span class="selector">.col-s-6 </span>{<span class="tag">width</span> : <span class="value">50%</span>;}<br>
+                            &emsp;&emsp;<span class="selector">.col-s-7 </span>{<span class="tag">width</span> : <span class="value">58.33%</span>;}<br>
+                            &emsp;&emsp;<span class="selector">.col-s-8 </span>{<span class="tag">width</span> : <span class="value">66.66%</span>;}<br>
+                            &emsp;&emsp;<span class="selector">.col-s-9 </span>{<span class="tag">width</span> : <span class="value">75%</span>;}<br>
+                            &emsp;&emsp;<span class="selector">.col-s-10 </span>{<span class="tag">width</span> : <span class="value">83.33%</span>;}<br>
+                            &emsp;&emsp;<span class="selector">.col-s-11 </span>{<span class="tag">width</span> : <span class="value">91.66%</span>;}<br>
+                            &emsp;&emsp;<span class="selector">.col-s-12 </span>{<span class="tag">width</span> : <span class="value">100%</span>;}<br>
+                        }<br>     
+
+                        <br>
+                        <span class="selector">@media only screen and (min-width: 768px)</span>{<br>
+                            &emsp;&emsp;<span style="color:green;">/* For desktop: */</span><br>
+                            &emsp;&emsp;<span class="selector">.col-1 </span>{<span class="tag">width</span> : <span class="value">8.33%</span>;}<br>
+                            &emsp;&emsp;<span class="selector">.col-2 </span>{<span class="tag">width</span> : <span class="value">16.66%</span>;}<br>
+                            &emsp;&emsp;<span class="selector">.col-3 </span>{<span class="tag">width</span> : <span class="value">25%</span>;}<br>
+                            &emsp;&emsp;<span class="selector">.col-4 </span>{<span class="tag">width</span> : <span class="value">33.33%</span>;}<br>
+                            &emsp;&emsp;<span class="selector">.col-5 </span>{<span class="tag">width</span> : <span class="value">41.66%</span>;}<br>
+                            &emsp;&emsp;<span class="selector">.col-6 </span>{<span class="tag">width</span> : <span class="value">50%</span>;}<br>
+                            &emsp;&emsp;<span class="selector">.col-7 </span>{<span class="tag">width</span> : <span class="value">58.33%</span>;}<br>
+                            &emsp;&emsp;<span class="selector">.col-8 </span>{<span class="tag">width</span> : <span class="value">66.66%</span>;}<br>
+                            &emsp;&emsp;<span class="selector">.col-9 </span>{<span class="tag">width</span> : <span class="value">75%</span>;}<br>
+                            &emsp;&emsp;<span class="selector">.col-10 </span>{<span class="tag">width</span> : <span class="value">83.33%</span>;}<br>
+                            &emsp;&emsp;<span class="selector">.col-11 </span>{<span class="tag">width</span> : <span class="value">91.66%</span>;}<br>
+                            &emsp;&emsp;<span class="selector">.col-12 </span>{<span class="tag">width</span> : <span class="value">100%</span>;}<br>
+                        }<br>                    
+                    </p>
+                </div>
+                <br>
+                <p>It might seem odd that we have two sets of identical classes, but it gives us the opportunity in HTML, to decide what will happen with the columns at each breakpoint:</p>
+                <p><b><i>HTML Example</i></b></p>
+                <p><b>For desktop:</b><br>                
+                The first and the third section will both span 3 columns each. The middle section will span 6 columns.<br>
+                <br>
+                <b>For tablets:</b><br>                
+                The first section will span 3 columns, the second will span 9, and the third section will be displayed below the first two sections, and it will span 12 columns:</p>
+                <div class="panel">
+                        <p>
+                            &lt;<span class="selector">div</span> <span class="tag">class</span><span class="value">="row"</span>&gt;<br>
+                            &emsp;&emsp;&lt;<span class="selector">div </span><span class="tag">class</span><span class="value">="col-3 col-s-3"</span>&gt;...&lt;<span class="selector">/div</span>&gt;<br>
+                            &emsp;&emsp;&lt;<span class="selector">div </span><span class="tag">class</span><span class="value">="col-6 col-s-9"</span>&gt;...&lt;<span class="selector">/div</span>&gt;<br>
+                            &emsp;&emsp;&lt;<span class="selector">div </span><span class="tag">class</span><span class="value">="col-3 col-s-12"</span>&gt;...&lt;<span class="selector">/div</span>&gt;<br>
+                            &lt;<span class="selector">/div</span>&gt; 
+                        </p>
+                </div> 
+                <br>
+                <br>
+
+
+                <h2 class="subcap" id="cap5">Typical Device Breakpoints</h2>
+
+                <p>There are tons of screens and devices with different heights and widths, so it is hard to create an exact breakpoint for each device. To keep things simple you could target five groups:</p>
+                <div class="panel">
+                    <p>
+                        <span style="color:green;">/* Extra small devices (phones, 600px and down) */</span><br>
+                        <span class="selector">@media only screen and (max-width: 600px)</span> {<span class="selector">...</span>}<br>
+                    </p>
+                    <p>
+                        <span style="color:green;">/* Small devices (portrait tablets and large phones, 600px and up) */</span><br>
+                        <span class="selector">@media only screen and (min-width: 600px)</span> {<span class="selector">...</span>}<br>
+                    </p>
+
+                    <p>
+                        <span style="color:green;">/* Medium devices (landscape tablets, 768px and up) */</span><br>
+                        <span class="selector">@media only screen and (min-width: 768px)</span> {<span class="selector">...</span>}<br>
+                    </p>
+
+                    <p>
+                        <span style="color:green;">/* Large devices (laptops/desktops, 992px and up) */</span><br>
+                        <span class="selector">@media only screen and (min-width: 992px)</span> {<span class="selector">...</span>}<br>
+                    </p>
+
+                    <p>
+                        <span style="color:green;">/* Extra large devices (large laptops and desktops, 1200px and up) */</span><br>
+                        <span class="selector">@media only screen and (min-width: 1200px)</span> {<span class="selector">...</span>}<br>
+                    </p>
+                </div> 
+                <br>
+                <br>
+
+                <h2 class="subcap" id="cap6">Orientation: Portrait / Landscape</h2>
+
+                <p>Media queries can also be used to change layout of a page depending on the orientation of the browser.</p>
+
+                <p>You can have a set of CSS properties that will only apply when the browser window is wider than its height, a so called "Landscape" orientation:</p>
+                <p><b>Example</b></p>
+                <p>The web page will have a lightblue background if the orientation is in landscape mode:</p>
+                <div class="panel">
+                    <p>
+                        <span class="selector">@media only screen and (max-width: 600px)</span> {
+                            &emsp;&emsp;<span class="selector"> body</span>{<br>
+                                &emsp;&emsp;&emsp;&emsp;<span class="tag">background-color</span> : <span class="value">lightblue</span>;<br>
+                            &emsp;&emsp;}<br>
+                        }<br>
+                    </p>                    
+                </div> 
+                <br>
+
+                <h3>Hide Elements With Media Queries</h3>
+                <p>Another common use of media queries, is to hide elements on different screen sizes:</p>
+                <p style="background-color: yellow; padding: 5px;">I will be hidden on small screens.</p>
+                <div class="panel">
+                    <p>
+                        <span style="color:green;">/* If the screen size is 600px wide or less, hide the element */</span><br>
+                        <span class="selector">@media</span> only screen and (max-width: 600px) {<br>
+                            &emsp;&emsp;<span class="selector"> div.exampl</span>{<br>
+                                &emsp;&emsp;&emsp;&emsp;<span class="tag">display</span> : <span class="value">none</span>;<br>
+                            &emsp;&emsp;}<br>
+                        }<br>
+                    </p>
+                </div> 
+                <br>
+                <img class="x50" src="img/responsive/none_ej.PNG"  alt="none">                
+                <br>
+                <br>
+                <img class="x50" src="img/responsive/none_ej2.PNG" alt="none2">              
+                <br>
+
+
+
+
+                <br>
+            </div>   
+        </main>
+        <aside>
+            <ul>
+                    <li>
+                        <h3><a href="tuTutorialCss.html">Home</a></h3>      
+                    </li>
+                    <li>
+                        <h3><a href="list.html">1.-CSS Lists</a></h3>                
+                        <ul>
+                            <li><h4><a href="list.html#cap1"  onclick="fueraMenu()">1.1.-Different List Item Markers</a></h4></li>
+                            <li><h4><a href="list.html#cap2"  onclick="fueraMenu()">1.2.-An Image as The List Item Marker</a></h4></li>
+                            <li><h4><a href="list.html#cap3"  onclick="fueraMenu()">1.3.-Position The List Item Markers</a></h4></li>
+                            <li><h4><a href="list.html#cap4"  onclick="fueraMenu()">1.4.-Remove Default Settings</a></h4></li>                    
+                            <li><h4><a href="list.html#cap5"  onclick="fueraMenu()">1.5.-List - Shorthand property</a></h4></li>
+                            <li><h4><a href="list.html#cap6"  onclick="fueraMenu()">1.6.-Styling List With Colors</a></h4></li>                    
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <h3><a href="form.html">2.-Forms</a></h3>                
+                        <ul>
+                            <li><h4><a href="form.html#cap1"  onclick="fueraMenu()">2.1.-The &lt;input&gt; element</a></h4></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3><a href="box_model.html">3.-CSS Box Model</a></h3>                
+                        <ul>
+                            <li><h4><a href="box_model.html#cap1"  onclick="fueraMenu()">3.1.-Width and Height of an Element</a></h4></li>
+                        </ul>
+                    </li>            
+                    <li>
+                        <h3><a href="grid-layout.html">4.-Grid Layout</a></h3>      
+                    </li>
+                    <li>
+                        <h3><a href="responsive.html">5.-Responsive</a></h3>                
+                        <ul>
+                            <li><h4><a href="responsive.html#cap1"  onclick="fueraMenu()">5.1.-Introduction</a></h4></li>
+                            <li><h4><a href="responsive.html#cap2"  onclick="fueraMenu()">5.2.-Grid-View</a></h4></li>
+                            <li><h4><a href="responsive.html#cap3"  onclick="fueraMenu()">5.3.-Building a Responsive Grid-View</a></h4></li>
+                            <li><h4><a href="responsive.html#cap4"  onclick="fueraMenu()">5.4.-Media Queries</a></h4></li>                    
+                            <li><h4><a href="responsive.html#cap5"  onclick="fueraMenu()">5.5.-Typical Device Breakpoints</a></h4></li>
+                            <li><h4><a href="responsive.html#cap6"  onclick="fueraMenu()">5.6.-Orientation: Portrait / Landscape</a></h4></li>                    
+                        </ul>
+                    </li>
+            </ul>
+        </aside>
+    </div>
+
+
+    <footer>
+        <p>By: Jose Ramón Cabrera Roig / Luis Marcos Dasi / Juan Borredá Marin</p>
+    </footer>
+    
+    <script src="js/mostrar-nav.js"></script>
+</body>
+</html>
